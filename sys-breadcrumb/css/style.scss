@@ -1,0 +1,40 @@
+$color-grey:rgb(108, 117, 125);
+$color-blue: rgba(46, 46, 238, 0.782);
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+h2{
+    text-align: center;
+}
+@mixin active {
+    color: $color-grey;
+}
+li{
+    display:inline-block;
+    margin-right: 10px;
+    @include active;
+}
+.bg{
+    padding: 8px 20px;
+    background:rgba(192,192,192);
+}
+.breadcrumb-item.active {
+    color:$color-grey;
+}
+li.slash::after {
+    content: "/";
+    position: relative;
+    left:6px;
+    color: rgb(0, 79, 155);
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+li.G-than::after {
+    content: ">";
+    position: relative;
+    left:6px;
+    color: rgb(0, 79, 155);
+}

@@ -1,0 +1,42 @@
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+  color: rgb(108, 117, 125);
+}
+
+.bg {
+  padding: 8px 20px;
+  background: rgb(192, 192, 192);
+}
+
+.breadcrumb-item.active {
+  color: rgb(108, 117, 125);
+}
+
+li.slash::after {
+  content: "/";
+  position: relative;
+  left: 6px;
+  color: rgb(0, 79, 155);
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+li.G-than::after {
+  content: ">";
+  position: relative;
+  left: 6px;
+  color: rgb(0, 79, 155);
+}/*# sourceMappingURL=style.css.map */
