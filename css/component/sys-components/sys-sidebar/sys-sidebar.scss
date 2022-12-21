@@ -262,6 +262,9 @@ $systheme-colors: (
 }
 
 .dark-theme{
+    .sys-sidebar-menu{
+        background-color: map.get($systheme-colors, "dark");
+    }
     .sys-sidebar-body{
         ul{
             padding-left: 0px;

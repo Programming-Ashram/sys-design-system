@@ -176,6 +176,9 @@
   background-color: #F5F5F5;
 }
 
+.dark-theme .sys-sidebar-menu {
+  background-color: #303030;
+}
 .dark-theme .sys-sidebar-body ul {
   padding-left: 0px;
   list-style-type: none;
