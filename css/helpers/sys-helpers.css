@@ -5,7 +5,7 @@
 }
 
 .text-accent, a.text-accent {
-  color: #000075;
+  color: #000075 !important;
 }
 
 .text-accent-90, a.text-accent {
@@ -37,7 +37,7 @@
 }
 
 .text-olive, a.text-olive {
-  color: #5FD855;
+  color: #5FD855 !important;
 }
 
 .text-olive-90, a.text-olive {
@@ -69,7 +69,7 @@
 }
 
 .text-alert, a.text-alert {
-  color: #FFB800;
+  color: #FFB800 !important;
 }
 
 .text-alert-90, a.text-alert {
@@ -101,7 +101,7 @@
 }
 
 .text-error, a.text-error {
-  color: #C73E1D;
+  color: #C73E1D !important;
 }
 
 .text-error-90, a.text-error {
@@ -133,7 +133,7 @@
 }
 
 .text-secondary, a.text-secondary {
-  color: #6c757d;
+  color: #6c757d !important;
 }
 
 .text-secondary-90, a.text-secondary {
@@ -165,7 +165,7 @@
 }
 
 .text-dark a.text-dark {
-  color: #303030;
+  color: #303030 !important;
 }
 
 .text-dark-90, a.text-dark {
@@ -197,7 +197,7 @@
 }
 
 .text-light, a.text-light {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .bg-accent {
@@ -444,7 +444,7 @@
 }
 
 .bg-light {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 .sticky-top {
