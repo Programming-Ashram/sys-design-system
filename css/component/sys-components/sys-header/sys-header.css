@@ -287,6 +287,9 @@
 header.sys-header .sys-grid {
   align-items: center;
 }
+header.sys-header .sys-brand {
+  width: 150px;
+}
 
 ul.sys-navbar {
   display: flex;
