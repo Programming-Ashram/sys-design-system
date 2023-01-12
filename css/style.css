@@ -502,7 +502,7 @@
   background-color: #6c757d;
 }
 
-.sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary {
+.sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary, .sys-btn-outline-critical {
   color: #303030;
   padding: 10px 20px;
   border-radius: 4px;
@@ -521,12 +521,24 @@
   border: 1px solid #304FFE;
 }
 
+.sys-btn-outline-accent {
+  border: 1px solid #e700e7;
+}
+
 .sys-btn-outline-error {
   border: 1px solid #C73E1D;
 }
 
 .sys-btn-outline-secondary {
   border: 1px solid #6c757d;
+}
+
+.sys-btn-outline-secondary {
+  border: 1px solid #6c757d;
+}
+
+.sys-btn-outline-critical {
+  border: 1px solid #e700e7;
 }
 
 .sys-btn-outline-disable {
@@ -584,6 +596,20 @@
   background-color: #6c757d;
   border: 1px solid white;
   box-shadow: 0px 4px 10px -1px rgba(108, 117, 125, 0.19);
+  transition: 0.2s;
+  color: white;
+}
+
+.sys-btn-outline-critical:hover {
+  background-color: rgba(231, 0, 231, 0.19);
+  box-shadow: 0px 4px 10px -1px rgba(231, 0, 231, 0.19);
+  transition: 0.2s;
+}
+
+.sys-btn-outline-critical:focus {
+  background-color: #e700e7;
+  border: 1px solid white;
+  box-shadow: 0px 4px 10px -1px rgba(231, 0, 231, 0.19);
   transition: 0.2s;
   color: white;
 }
@@ -658,7 +684,7 @@
   padding: 14px 10px !important;
 }
 
-.sys-btn-accent, .sys-btn-olive, .sys-btn-alert, .sys-btn-error, .sys-btn-secondary {
+.sys-btn-accent, .sys-btn-olive, .sys-btn-alert, .sys-btn-error, .sys-btn-secondary, .sys-btn-critical {
   color: #303030;
   padding: 10px 20px;
   border-radius: 4px;
@@ -693,6 +719,25 @@
 
 .sys-btn-secondary {
   background-color: #6c757d;
+}
+
+.sys-btn-critical {
+  background-color: #e700e7;
+}
+
+.sys-btn-critical:hover {
+  background-color: rgba(231, 0, 231, 0.19);
+  box-shadow: 0px 4px 10px -1px rgba(231, 0, 231, 0.19);
+  transition: 0.2s;
+  border: 1px solid #e700e7;
+}
+
+.sys-btn-critical:focus {
+  background-color: #e700e7;
+  border: 1px solid white;
+  box-shadow: 0px 4px 10px -1px rgba(231, 0, 231, 0.19);
+  transition: 0.2s;
+  color: white;
 }
 
 .sys-btn-accent:hover {
@@ -975,7 +1020,7 @@
   background-color: #303030;
   color: white;
 }
-.dark-theme .sys-btn-outline-accent, .dark-theme .sys-btn-outline-alert, .dark-theme .sys-btn-outline-olive, .dark-theme .sys-btn-outline-error, .dark-theme .sys-btn-outline-secondary {
+.dark-theme .sys-btn-outline-accent, .dark-theme .sys-btn-outline-alert, .dark-theme .sys-btn-outline-olive, .dark-theme .sys-btn-outline-error, .dark-theme .sys-btn-outline-secondary, .dark-theme .sys-btn-outline-critical {
   color: white;
 }
 .dark-theme .sys-btn-outline-accent {
@@ -1020,6 +1065,21 @@
   background-color: #5FD855;
   border: 1px solid white;
   box-shadow: 0px 4px 10px 0px rgba(44, 148, 35, 0.19);
+  transition: 0.2s;
+  color: white;
+}
+.dark-theme .sys-btn-outline-critical {
+  border: 1px solid #e700e7;
+}
+.dark-theme .sys-btn-outline-critical:hover {
+  background-color: rgba(231, 0, 231, 0.19);
+  box-shadow: 0px 4px 10px 0px rgba(231, 0, 231, 0.19);
+  transition: 0.2s;
+}
+.dark-theme .sys-btn-outline-critical:focus {
+  background-color: #e700e7;
+  border: 1px solid white;
+  box-shadow: 0px 4px 10px 0px rgba(231, 0, 231, 0.19);
   transition: 0.2s;
   color: white;
 }

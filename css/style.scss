@@ -38,6 +38,9 @@ $error-19:rgb(199, 62, 29, 19%);
 $secondary-100:#6c757d;
 $secondary-19:rgb(108, 117, 125, 19%);
 
+$critical-100:#e700e7;
+$critical-19:rgb(231, 0, 231, 19%);
+
 
 // dark
 $dark:#303030;
@@ -297,6 +300,7 @@ $gray:#292929;
     border-color: $secondary-100;
 }
 
+
 .sys-outline-badge{
     
     .badge-accent{
@@ -365,63 +369,6 @@ $gray:#292929;
     } 
 }
 
-// @mixin elevation-dark {
-//     padding: 1rem;
-//     border-radius: 4px;
-//     width: 200px;
-//     background-color: $gray;
-//     margin: 10px;
-//     .elevation-title{
-//         color:white;
-//         font-size: 1rem;
-//     }
-//     .elevation-content{
-//         color:white;
-//         line-height: 20px;
-//         margin-bottom: 10px;
-//     } 
-// }
-
-// @mixin card{
-//     width: 18rem;
-//     background-color: gray;
-//     color: white;
-//     border-radius: 4px;
-//     .sys-card-header, .sys-card-body, .sys-card-footer{
-//         padding: 0.9rem;
-//     }
-//     .sys-card-header{
-//         font-size: 0.70rem;
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//     }
-//     .sys-card-subtitle{
-//         font-size: 0.9rem;
-//         color: darkgray;
-//     }
-//     .sys-card-body{
-//         width: 100%;
-//         height: 78px;
-//         overflow: hidden;
-//         text-overflow: ellipsis;
-//         line-height: 20px;
-//         margin-bottom: 10px;
-
-//     }
-//     .sys-card-footer{
-//         border-top: 1px solid white;
-//         padding: 8px 10px;
-//     }
-
-   
-// }
-
-
-// .sys-card{
-//     @include card;
-// }
-
 .sys-elevation-v1{ 
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
@@ -489,17 +436,26 @@ $gray:#292929;
     }
 }
 
-.sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary{
+.sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary, .sys-btn-outline-critical{
     @include outline-button();    
 }
 .sys-btn-outline-accent{
     border: 1px solid $accent-100;
+}
+.sys-btn-outline-accent{
+    border: 1px solid $critical-100;
 }
 .sys-btn-outline-error{
     border: 1px solid $error-100;
 }
 .sys-btn-outline-secondary{
     border: 1px solid $secondary-100;
+}
+.sys-btn-outline-secondary{
+    border: 1px solid $secondary-100;
+}
+.sys-btn-outline-critical{
+    border: 1px solid $critical-100;
 }
 .sys-btn-outline-disable{
    @include disable-outline-button(); 
@@ -532,6 +488,18 @@ $gray:#292929;
     background-color: $secondary-100;
     border: 1px solid white;
     box-shadow: 0px 4px 10px -1px $secondary-19;
+    transition: 0.2s;
+    color: white;
+}
+.sys-btn-outline-critical:hover{
+    background-color: $critical-19;
+    box-shadow: 0px 4px 10px -1px $critical-19;
+    transition: 0.2s;
+}
+.sys-btn-outline-critical:focus{
+    background-color: $critical-100;
+    border: 1px solid white;
+    box-shadow: 0px 4px 10px -1px $critical-19;
     transition: 0.2s;
     color: white;
 }
@@ -586,7 +554,7 @@ $gray:#292929;
 }
 
 // standard button
-.sys-btn-accent, .sys-btn-olive, .sys-btn-alert, .sys-btn-error, .sys-btn-secondary{
+.sys-btn-accent, .sys-btn-olive, .sys-btn-alert, .sys-btn-error, .sys-btn-secondary, .sys-btn-critical{
     @include standard-button();
     border: none;
     color: white;
@@ -608,7 +576,22 @@ $gray:#292929;
 .sys-btn-secondary{
     background-color: $secondary-100;
 }
-
+.sys-btn-critical{
+    background-color: $critical-100;
+}
+.sys-btn-critical:hover{
+    background-color: $critical-19;
+    box-shadow: 0px 4px 10px -1px $critical-19;
+    transition: 0.2s;
+    border: 1px solid $critical-100;
+}
+.sys-btn-critical:focus{
+    background-color: $critical-100;
+    border: 1px solid white;
+    box-shadow: 0px 4px 10px -1px $critical-19;
+    transition: 0.2s;
+    color: white;
+}
 .sys-btn-accent:hover{
     background-color: $accent-19;
     box-shadow: 0px 4px 10px -1px $accent-19;
@@ -891,7 +874,7 @@ $gray:#292929;
     @mixin dark-outline-button{
         color: white;
     }
-    .sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary{
+    .sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary, .sys-btn-outline-critical{
         @include dark-outline-button();
     }
     .sys-btn-outline-accent{
@@ -937,6 +920,22 @@ $gray:#292929;
         background-color: $olive-100;
         border: 1px solid white;
         box-shadow: 0px 4px 10px 0px $olive-19;
+        transition: 0.2s;
+        color: white;
+    }
+
+    .sys-btn-outline-critical{
+        border: 1px solid $critical-100;
+    }
+    .sys-btn-outline-critical:hover{
+        background-color: $critical-19;
+        box-shadow: 0px 4px 10px 0px $critical-19;
+        transition: 0.2s;
+    }
+    .sys-btn-outline-critical:focus{
+        background-color: $critical-100;
+        border: 1px solid white;
+        box-shadow: 0px 4px 10px 0px $critical-19;
         transition: 0.2s;
         color: white;
     }
