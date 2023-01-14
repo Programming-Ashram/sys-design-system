@@ -502,7 +502,7 @@
   background-color: #6c757d;
 }
 
-.sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary, .sys-btn-outline-critical {
+.sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary, .sys-btn-outline-critical, .sys-btn-outline-dark {
   color: #303030;
   padding: 10px 20px;
   border-radius: 4px;
@@ -515,6 +515,10 @@
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
+}
+
+.sys-btn-outline-dark {
+  border: 1px solid #000000;
 }
 
 .sys-btn-outline-accent {
@@ -576,6 +580,20 @@
   background-color: rgba(0, 38, 202, 0.19);
   box-shadow: 0px 4px 10px -1px rgba(0, 38, 202, 0.19);
   transition: 0.2s;
+}
+
+.sys-btn-outline-dark:hover {
+  background-color: rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 4px 10px -1px rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}
+
+.sys-btn-outline-dark:focus {
+  background-color: #000000;
+  border: 1px solid white;
+  box-shadow: 0px 4px 10px -1px rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+  color: white;
 }
 
 .sys-btn-outline-accent:focus {
@@ -684,7 +702,7 @@
   padding: 14px 10px !important;
 }
 
-.sys-btn-accent, .sys-btn-olive, .sys-btn-alert, .sys-btn-error, .sys-btn-secondary, .sys-btn-critical {
+.sys-btn-accent, .sys-btn-olive, .sys-btn-alert, .sys-btn-error, .sys-btn-secondary, .sys-btn-critical, .sys-btn-dark {
   color: #303030;
   padding: 10px 20px;
   border-radius: 4px;
@@ -699,6 +717,10 @@
   display: inline-block;
   border: none;
   color: white;
+}
+
+.sys-btn-dark {
+  background-color: #000000;
 }
 
 .sys-btn-accent {
@@ -723,6 +745,21 @@
 
 .sys-btn-critical {
   background-color: #e700e7;
+}
+
+.sys-btn-dark:hover {
+  background-color: rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 4px 10px -1px rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+  border: 1px solid #000000;
+}
+
+.sys-btn-dark:focus {
+  background-color: #000000;
+  border: 1px solid white;
+  box-shadow: 0px 4px 10px -1px rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+  color: white;
 }
 
 .sys-btn-critical:hover {
@@ -1020,7 +1057,7 @@
   background-color: #303030;
   color: white;
 }
-.dark-theme .sys-btn-outline-accent, .dark-theme .sys-btn-outline-alert, .dark-theme .sys-btn-outline-olive, .dark-theme .sys-btn-outline-error, .dark-theme .sys-btn-outline-secondary, .dark-theme .sys-btn-outline-critical {
+.dark-theme .sys-btn-outline-accent, .dark-theme .sys-btn-outline-alert, .dark-theme .sys-btn-outline-olive, .dark-theme .sys-btn-outline-error, .dark-theme .sys-btn-outline-secondary, .dark-theme .sys-btn-outline-critical, .dark-theme .sys-btn-outline-dark {
   color: white;
 }
 .dark-theme .sys-btn-outline-accent {
