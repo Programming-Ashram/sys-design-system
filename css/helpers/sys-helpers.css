@@ -545,24 +545,20 @@
   justify-content: space-evenly;
 }
 
-.align-i-end {
-  justify-content: flex-end;
+.align-i-center {
+  align-items: center;
 }
 
 .align-i-start {
-  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.align-i-between {
-  justify-content: space-between;
+.align-i-baseline {
+  align-items: baseline;
 }
 
-.align-i-arround {
-  justify-content: space-around;
-}
-
-.align-i-evenly {
-  justify-content: space-evenly;
+.align-i-end {
+  align-items: flex-end;
 }
 
 .sys-radius {

@@ -246,11 +246,10 @@ $systheme-colors: (
 .justify-c-evenly{justify-content: space-evenly;}
 
 // Alignment Properties (align Item)
-.align-i-end{justify-content: flex-end;}
-.align-i-start{justify-content: flex-start;}
-.align-i-between{justify-content: space-between;}
-.align-i-arround{justify-content: space-around;}
-.align-i-evenly{justify-content: space-evenly;}
+.align-i-center{align-items: center;}
+.align-i-start{align-items: flex-start;}
+.align-i-baseline{align-items: baseline;}
+.align-i-end{align-items: flex-end;}
 
 
 $radius:(
