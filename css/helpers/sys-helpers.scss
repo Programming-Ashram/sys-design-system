@@ -251,6 +251,18 @@ $systheme-colors: (
 .align-i-baseline{align-items: baseline;}
 .align-i-end{align-items: flex-end;}
 
+// Gaps
+
+.gap-sm{
+   gap: 10px;
+}
+.gap-lg{
+   gap: 30px;
+}
+.gap-xlg{
+   gap: 50px;
+}
+
 
 $radius:(
    "sm" : 4px,

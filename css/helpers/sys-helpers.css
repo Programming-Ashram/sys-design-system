@@ -561,6 +561,18 @@
   align-items: flex-end;
 }
 
+.gap-sm {
+  gap: 10px;
+}
+
+.gap-lg {
+  gap: 30px;
+}
+
+.gap-xlg {
+  gap: 50px;
+}
+
 .sys-radius {
   border-radius: 4px;
 }
