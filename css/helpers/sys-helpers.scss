@@ -226,6 +226,33 @@ $systheme-colors: (
 .overflowX-auto{overflow-x: auto;}
 .overflowY-auto{overflow-y: auto;}
 
+// Flex Sides
+.flex{
+   display: flex;
+}
+.f-d-row{
+   flex-direction: row;
+}
+.f-d-col{
+   flex-direction: column;
+}
+
+// Justify Properties (Justify Content )
+
+.justify-c-end{justify-content: flex-end;}
+.justify-c-start{justify-content: flex-start;}
+.justify-c-between{justify-content: space-between;}
+.justify-c-arround{justify-content: space-around;}
+.justify-c-evenly{justify-content: space-evenly;}
+
+// Alignment Properties (align Item)
+.align-i-end{justify-content: flex-end;}
+.align-i-start{justify-content: flex-start;}
+.align-i-between{justify-content: space-between;}
+.align-i-arround{justify-content: space-around;}
+.align-i-evenly{justify-content: space-evenly;}
+
+
 $radius:(
    "sm" : 4px,
    "lg" : 1rem,
