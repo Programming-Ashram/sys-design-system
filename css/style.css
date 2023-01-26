@@ -18,7 +18,6 @@
 
 .sys-card-v1 {
   padding: 1.3rem;
-  max-width: 40%;
   width: auto !important;
   border-radius: 10px !important;
   height: 100%;
@@ -53,7 +52,6 @@
 .sys-card-v2 {
   max-width: 20%;
   padding: 1.3rem;
-  max-width: 40%;
   width: auto !important;
   border-radius: 10px !important;
   height: 100%;
