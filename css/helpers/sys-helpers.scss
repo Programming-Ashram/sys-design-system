@@ -77,6 +77,15 @@ $systheme-colors: (
   "dark-65": variable.$dark-65,
   "dark-60": variable.$dark-60,
 
+  "critical": variable.$critical-100,
+  "critical-90": variable.$critical-90,
+  "critical-85": variable.$critical-85,
+  "critical-80": variable.$critical-80,
+  "critical-75": variable.$critical-75,
+  "critical-70": variable.$critical-70,
+  "critical-65": variable.$critical-65,
+  "critical-60": variable.$critical-60,
+
   "light": variable.$light-100,
 
 
@@ -137,6 +146,17 @@ $systheme-colors: (
 .text-dark-65, a.text-dark{color: map.get($systheme-colors, "dark-65");}
 .text-dark-60, a.text-dark{color: map.get($systheme-colors, "dark-60");}
 
+
+
+.text-critical a.text-critical{color: map.get($systheme-colors, "critical") !important;}
+.text-critical-90, a.text-critical{color: map.get($systheme-colors, "critical-90");}
+.text-critical-85, a.text-critical{color: map.get($systheme-colors, "critical-85");}
+.text-critical-80, a.text-critical{color: map.get($systheme-colors, "critical-80");}
+.text-critical-75, a.text-critical{color: map.get($systheme-colors, "critical-75");}
+.text-critical-70, a.text-critical{color: map.get($systheme-colors, "critical-70");}
+.text-critical-65, a.text-critical{color: map.get($systheme-colors, "critical-65");}
+.text-critical-60, a.text-critical{color: map.get($systheme-colors, "critical-60");}
+
 .text-light, a.text-light{color: map.get($systheme-colors, "light")!important;}
 
 // Backgrounds 
@@ -190,6 +210,7 @@ $systheme-colors: (
    button,a{
       color: white;
    }}
+
 .bg-dark-90{background-color: map.get($systheme-colors, "dark-90");color: map.get($systheme-colors, "light") !important;}
 .bg-dark-85{background-color: map.get($systheme-colors, "dark-85");color: map.get($systheme-colors, "light") !important;}
 .bg-dark-80{background-color: map.get($systheme-colors, "dark-80");color: map.get($systheme-colors, "light") !important;}
@@ -197,6 +218,15 @@ $systheme-colors: (
 .bg-dark-70{background-color: map.get($systheme-colors, "dark-70");color: map.get($systheme-colors, "light") !important;}
 .bg-dark-65{background-color: map.get($systheme-colors, "dark-65");color: map.get($systheme-colors, "light") !important;}
 .bg-dark-60{background-color: map.get($systheme-colors, "dark-60");color: map.get($systheme-colors, "light") !important;}
+
+
+.bg-critical-90{background-color: map.get($systheme-colors, "critical-90");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-85{background-color: map.get($systheme-colors, "critical-85");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-80{background-color: map.get($systheme-colors, "critical-80");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-75{background-color: map.get($systheme-colors, "critical-75");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-70{background-color: map.get($systheme-colors, "critical-70");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-65{background-color: map.get($systheme-colors, "critical-65");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-60{background-color: map.get($systheme-colors, "critical-60");color: map.get($systheme-colors, "light") !important;}
 
 .bg-light{background-color: map.get($systheme-colors, "light")!important;}
 
