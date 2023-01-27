@@ -33,6 +33,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: rgba(108, 117, 125, 0.75);
 }
 
+.no-list-style {
+  list-style: none;
+}
+
 .caps {
   text-transform: capitalize;
 }
