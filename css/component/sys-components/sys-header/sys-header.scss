@@ -27,3 +27,11 @@ ul.sys-navbar{
         width: 100%;
     }
 }
+
+
+@media(max-width: 767px){
+    .sys-navbar{
+        display: grid !important;
+        width: 100%;
+    }
+}

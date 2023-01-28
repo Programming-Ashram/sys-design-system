@@ -303,4 +303,11 @@ ul.sys-navbar li a {
 ul.sys-navbar.vertical-menu {
   display: grid;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .sys-navbar {
+    display: grid !important;
+    width: 100%;
+  }
 }/*# sourceMappingURL=sys-header.css.map */
