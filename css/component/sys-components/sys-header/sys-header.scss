@@ -22,4 +22,8 @@ ul.sys-navbar{
             text-decoration: none;
         }
     }
+    &.vertical-menu{
+        display: grid;
+        width: 100%;
+    }
 }

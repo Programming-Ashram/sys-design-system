@@ -584,6 +584,10 @@
   display: flex;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .f-d-row {
   flex-direction: row;
 }
