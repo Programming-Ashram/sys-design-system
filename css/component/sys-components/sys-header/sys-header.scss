@@ -22,16 +22,20 @@ ul.sys-navbar{
             text-decoration: none;
         }
     }
-    // &.vertical-menu{
-    //     display: grid;
-    //     width: 100%;
-    // }
+    &.vertical-menu{
+        display: grid;
+        width: 100%;
+    }
+}
+
+ul.sys-nav-mobile{
+    @extend .sys-navbar;
 }
 
 
-// @media(max-width: 767px){
-//     .sys-navbar{
-//         display: grid !important;
-//         width: 100%;
-//     }
-// }
+@media(max-width: 767px){
+    .sys-nav-mobile{
+        display: grid !important;
+        width: 100%;
+    }
+}

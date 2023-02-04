@@ -287,16 +287,27 @@ header.sys-header .sys-brand {
   width: 150px;
 }
 
-ul.sys-navbar {
+ul.sys-navbar, ul.sys-nav-mobile {
   display: flex;
   list-style-type: none;
   align-items: center;
 }
-ul.sys-navbar li {
+ul.sys-navbar li, ul.sys-nav-mobile li {
   display: inline-block;
   margin-right: 1rem;
 }
-ul.sys-navbar li a {
+ul.sys-navbar li a, ul.sys-nav-mobile li a {
   font-size: 1.2rem;
   text-decoration: none;
+}
+ul.sys-navbar.vertical-menu, ul.vertical-menu.sys-nav-mobile {
+  display: grid;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .sys-nav-mobile {
+    display: grid !important;
+    width: 100%;
+  }
 }/*# sourceMappingURL=sys-header.css.map */
