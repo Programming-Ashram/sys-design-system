@@ -889,7 +889,6 @@
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .sys-checkbox .checkmark:after, .sys-outline-checkbox .checkmark:after {
@@ -959,7 +958,6 @@
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .sys-outline-checkbox .checkmark:after {
@@ -1141,7 +1139,6 @@
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .dark-theme .sys-checkbox .checkmark:after, .dark-theme .sys-outline-checkbox .checkmark:after {
@@ -1210,7 +1207,6 @@
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .dark-theme .sys-outline-checkbox .checkmark:after {

@@ -111,10 +111,8 @@
 .sidebar-collapse {
   width: 65px !important;
   overflow: hidden;
-  -webkit-animation-name: slideRight;
-          animation-name: slideRight;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-name: slideRight;
+  animation-duration: 2s;
 }
 .sidebar-collapse .sys-sidebar-head {
   padding: 0;
