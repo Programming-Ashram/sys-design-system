@@ -6,7 +6,7 @@
 .sys-snackbar{
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     z-index: 9999999;
     background-color: $light-100;
     color: $dark-100;
@@ -35,6 +35,10 @@
         border-top: 1px solid $secondary-100;
         @extend .mt-1;
         @extend .p-2;
+
+        p,h1,h2,h3,h4,h5,h6{
+            font-size: 0.8rem;
+        }
     }
 
     &.topLeft{

@@ -2311,7 +2311,7 @@
 .sys-snackbar {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   z-index: 9999999;
   background-color: #ffffff;
   color: #000000;
@@ -2333,6 +2333,9 @@
 }
 .sys-snackbar .snackbar-body {
   border-top: 1px solid #6c757d;
+}
+.sys-snackbar .snackbar-body p, .sys-snackbar .snackbar-body h1, .sys-snackbar .snackbar-body h2, .sys-snackbar .snackbar-body h3, .sys-snackbar .snackbar-body h4, .sys-snackbar .snackbar-body h5, .sys-snackbar .snackbar-body h6 {
+  font-size: 0.8rem;
 }
 .sys-snackbar.topLeft {
   left: 20px;
