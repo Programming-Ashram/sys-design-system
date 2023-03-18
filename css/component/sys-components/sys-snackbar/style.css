@@ -537,7 +537,7 @@
   bottom: 0;
 }
 
-.absolute, .sys-snackbar.bottomCenter, .sys-snackbar.bottomRight, .sys-snackbar.bottomLeft, .sys-snackbar.topCenter, .sys-snackbar.topRight, .sys-snackbar.topLeft {
+.absolute {
   position: absolute;
 }
 
@@ -555,7 +555,7 @@
   bottom: 0;
 }
 
-.fixed {
+.fixed, .sys-snackbar.bottomCenter, .sys-snackbar.bottomRight, .sys-snackbar.bottomLeft, .sys-snackbar.topCenter, .sys-snackbar.topRight, .sys-snackbar.topLeft {
   position: fixed;
 }
 
