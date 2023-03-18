@@ -19,10 +19,10 @@ function infofunc(e, info) {
    
  }
 
-let snackbar = document.getElementsByClassName('sys-snackbar');
-let snackbarBtn = document.getElementsByClassName('snackbar-close-btn');
-for(let i = 0; i < snackbarBtn.length; i++){
-    snackbarBtn[i].addEventListener('click', function(){
+// let syssnackbar = document.getElementsByClassName('sys-snackbar');
+let syssnackbarBtn = document.getElementsByClassName('snackbar-close-btn');
+for(let i = 0; i < syssnackbarBtn.length; i++){
+    syssnackbarBtn[i].addEventListener('click', function(){
         this.parentElement.style.display = "none";
     })
 }
