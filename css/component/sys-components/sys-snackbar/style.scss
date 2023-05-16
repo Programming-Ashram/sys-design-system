@@ -1,0 +1,81 @@
+@import './../../../helpers/sys-helpers.scss';
+@import './../../../utilites/spacing/sys-utilities';
+@import './../../../variables/variable';
+@import './../../../style.scss';
+
+.sys-snackbar{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    z-index: 9999999;
+    background-color: $light-100;
+    color: $dark-100;
+    @extend .sys-elevation-v2;
+    @extend .p-2;
+    @extend .sys-radius-sm;
+
+    .snackbar-close-btn{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .snackbar-head{
+        display: flex;
+        align-items: center;
+        @extend .gap-sm;
+        @extend .p-2;
+        .snackbar-title{
+            font-size: 1rem;
+        }
+    }
+    .snackbar-body{
+        border-top: 1px solid $secondary-100;
+        @extend .mt-1;
+        @extend .p-2;
+
+        p,h1,h2,h3,h4,h5,h6{
+            font-size: 0.8rem;
+        }
+    }
+
+    &.topLeft{
+        left: 20px;
+        top: 20px;
+        @extend .fixed;
+    }
+
+    &.topRight{
+        right: 20px;
+        top: 20px;
+        @extend .fixed;
+    }
+    &.topCenter{
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        @extend .fixed;
+    }
+
+    &.bottomLeft{
+        left: 20px;
+        bottom: 20px;
+        @extend .fixed;
+    }
+
+    &.bottomRight{
+        right: 20px;
+        bottom: 20px;
+        @extend .fixed;
+    }
+    &.bottomCenter{
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        @extend .fixed;
+    }
+}
+

@@ -1,0 +1,35 @@
+.sys-container{
+    width: 95%;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.sys-container-sm {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.sys-container-lg {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.sys-container-xl {
+    width: 1270px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media(max-width: 940px){
+    .sys-container, .sys-container-xl, .sys-container-lg, .sys-container-sm {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

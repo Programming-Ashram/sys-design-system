@@ -1,0 +1,194 @@
+.sys-sidebar {
+  display: flex;
+}
+.sys-sidebar .sidebar-content {
+  width: 100%;
+  padding: 1rem;
+  margin-left: 200px;
+}
+.sys-sidebar .sidebar-collapse ~ .sidebar-content {
+  margin-left: 70px;
+}
+.sys-sidebar .sys-container {
+  width: 100%;
+}
+.sys-sidebar .sys-sub-menu {
+  padding-left: 0px;
+  margin-top: 15px;
+  line-height: 1.7;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.sys-sidebar-menu {
+  width: 200px;
+  background: white;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  margin: 0px !important;
+}
+.sys-sidebar-menu .sys-sidebar-head {
+  padding: 0;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+}
+.sys-sidebar-menu .sys-sidebar-head h1, .sys-sidebar-menu .sys-sidebar-head h2, .sys-sidebar-menu .sys-sidebar-head h3, .sys-sidebar-menu .sys-sidebar-head h4, .sys-sidebar-menu .sys-sidebar-head h5, .sys-sidebar-menu .sys-sidebar-head h6 {
+  font-size: 0.7rem;
+}
+.sys-sidebar-menu .sys-sidebar-head span {
+  margin-left: 5px;
+}
+.sys-sidebar-menu .sys-sidebar-head i {
+  border-radius: 3px;
+}
+.sys-sidebar-menu .sys-sidebar-body ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+.sys-sidebar-menu .sys-sidebar-body ul li {
+  position: relative;
+  display: block;
+  margin: 0.7rem 0px;
+  padding: 0.5rem 0;
+}
+.sys-sidebar-menu .sys-sidebar-body ul li a {
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgba(108, 117, 125, 0.9);
+  padding: 1rem;
+}
+.sys-sidebar-menu .sys-sidebar-body ul li a i {
+  margin-right: 0.6rem;
+}
+.sys-sidebar-menu .sys-sidebar-body ul li:hover {
+  background-color: rgba(0, 0, 209, 0.6);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.sys-sidebar-menu .sys-sidebar-body ul li:hover a {
+  color: #ffffff;
+}
+.sys-sidebar-menu .sys-sidebar-footer {
+  margin-top: 1rem;
+}
+.sys-sidebar-menu .sys-sidebar-footer .sys-grid {
+  align-items: center;
+}
+.sys-sidebar-menu .sys-sidebar-footer .sys-grid img {
+  margin-right: 1rem;
+}
+.sys-sidebar-menu .sys-sidebar-footer .user-pro img {
+  width: 40px;
+}
+.sys-sidebar-menu .sys-sidebar-footer .sidebar-title {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.sys-sidebar-menu .sys-sidebar-footer img {
+  border-radius: 100%;
+  width: 100%;
+}
+
+.sidebar-scroll {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 2px;
+  background-color: #F5F5F5;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(108, 117, 125, 0.6);
+}
+
+.sidebar-collapse {
+  width: 65px !important;
+  overflow: hidden;
+  animation-name: slideRight;
+  animation-duration: 2s;
+}
+.sidebar-collapse .sys-sidebar-head {
+  padding: 0;
+  text-align: center;
+}
+.sidebar-collapse .sys-sidebar-head h1, .sidebar-collapse .sys-sidebar-head h2, .sidebar-collapse .sys-sidebar-head h3, .sidebar-collapse .sys-sidebar-head h4, .sidebar-collapse .sys-sidebar-head h5, .sidebar-collapse .sys-sidebar-head h6 {
+  display: none;
+}
+.sidebar-collapse .sys-sidebar-head span {
+  display: none;
+}
+.sidebar-collapse .sys-sidebar-head #menu a i {
+  padding: 7px 11px !important;
+}
+.sidebar-collapse .sys-sidebar-body ul li {
+  margin-right: 0;
+  text-align: center;
+}
+.sidebar-collapse .sys-sidebar-body ul li a {
+  padding: 0;
+}
+.sidebar-collapse .sys-sidebar-body ul li a i {
+  margin-right: 0;
+}
+.sidebar-collapse .sys-sidebar-body ul li a span {
+  display: none;
+}
+.sidebar-collapse .sys-sidebar-body ul li[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+  top: -100%;
+  left: -18px;
+  color: white;
+  padding: 0px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: rgba(108, 117, 125, 0.8);
+}
+.sidebar-collapse .sys-sidebar-footer .sys-grid {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.sidebar-collapse .sys-sidebar-footer .sys-grid h1, .sidebar-collapse .sys-sidebar-footer .sys-grid h2, .sidebar-collapse .sys-sidebar-footer .sys-grid h3, .sidebar-collapse .sys-sidebar-footer .sys-grid h4, .sidebar-collapse .sys-sidebar-footer .sys-grid h5, .sidebar-collapse .sys-sidebar-footer .sys-grid h6 {
+  display: none;
+}
+.sidebar-collapse .sys-sidebar-footer .sys-grid span {
+  display: none;
+}
+.sidebar-collapse .sys-sidebar-footer .sys-grid img {
+  border-radius: 100%;
+  width: 100%;
+}
+.sidebar-collapse.sidebar-scroll {
+  overflow-y: scroll;
+  height: 100vh;
+}
+.sidebar-collapse.sidebar-scroll::-webkit-scrollbar {
+  width: 2px;
+  background-color: #F5F5F5;
+}
+
+.dark-theme .sys-sidebar-menu {
+  background-color: #303030;
+}
+.dark-theme .sys-sidebar-body ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+.dark-theme .sys-sidebar-body ul li a {
+  color: #ffffff;
+}
+.dark-theme .sidebar-scroll {
+  overflow-y: scroll;
+  height: 100vh;
+}
+.dark-theme .sidebar-scroll::-webkit-scrollbar {
+  width: 2px;
+  background-color: #F5F5F5;
+}/*# sourceMappingURL=sys-sidebar.css.map */

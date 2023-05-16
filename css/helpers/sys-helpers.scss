@@ -1,0 +1,357 @@
+@use "../variables/variable";
+@use "sass:map";
+
+// clearfix
+@mixin clearfix() {
+    &::after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+ }
+
+ .clearfix{
+    @include clearfix();
+ }
+
+// SYS COLOR THEMEPALET
+$systheme-colors: (
+   // accent variation
+  "accent": variable.$accent-100,
+  "accent-90": variable.$accent-90,
+  "accent-85": variable.$accent-85,
+  "accent-80": variable.$accent-80,
+  "accent-75": variable.$accent-75,
+  "accent-70": variable.$accent-70,
+  "accent-65": variable.$accent-65,
+  "accent-60": variable.$accent-60,
+
+  // Olive variation
+  "olive": variable.$olive-100,
+  "olive-90": variable.$olive-90,
+  "olive-85": variable.$olive-85,
+  "olive-80": variable.$olive-80,
+  "olive-75": variable.$olive-75,
+  "olive-70": variable.$olive-70,
+  "olive-65": variable.$olive-65,
+  "olive-60": variable.$olive-60,
+
+  // Alert variation
+  "alert": variable.$alert-100,
+  "alert-90": variable.$alert-90,
+  "alert-85": variable.$alert-85,
+  "alert-80": variable.$alert-80,
+  "alert-75": variable.$alert-75,
+  "alert-70": variable.$alert-70,
+  "alert-65": variable.$alert-65,
+  "alert-60": variable.$alert-60,
+
+
+  //Error variation   
+  "error": variable.$error-100,
+  "error-90": variable.$error-90,
+  "error-85": variable.$error-85,
+  "error-80": variable.$error-80,
+  "error-75": variable.$error-75,
+  "error-70": variable.$error-70,
+  "error-65": variable.$error-65,
+  "error-60": variable.$error-60,
+
+
+  // Secondary Variation   
+  "secondary": variable.$secondary-100,
+  "secondary-90": variable.$secondary-90,
+  "secondary-85": variable.$secondary-85,
+  "secondary-80": variable.$secondary-80,
+  "secondary-75": variable.$secondary-75,
+  "secondary-70": variable.$secondary-70,
+  "secondary-65": variable.$secondary-65,
+  "secondary-60": variable.$secondary-60,
+
+  "dark": variable.$dark-100,
+  "dark-90": variable.$dark-90,
+  "dark-85": variable.$dark-85,
+  "dark-80": variable.$dark-80,
+  "dark-75": variable.$dark-75,
+  "dark-70": variable.$dark-70,
+  "dark-65": variable.$dark-65,
+  "dark-60": variable.$dark-60,
+
+  "critical": variable.$critical-100,
+  "critical-90": variable.$critical-90,
+  "critical-85": variable.$critical-85,
+  "critical-80": variable.$critical-80,
+  "critical-75": variable.$critical-75,
+  "critical-70": variable.$critical-70,
+  "critical-65": variable.$critical-65,
+  "critical-60": variable.$critical-60,
+
+  "light": variable.$light-100,
+
+
+);
+
+.text-accent, a.text-accent{color: map.get($systheme-colors, "accent")!important;}
+.text-accent-90, a.text-accent{color: map.get($systheme-colors, "accent-90");}
+.text-accent-85, a.text-accent{color: map.get($systheme-colors, "accent-85");}
+.text-accent-80, a.text-accent{color: map.get($systheme-colors, "accent-80");}
+.text-accent-75, a.text-accent{color: map.get($systheme-colors, "accent-75");}
+.text-accent-70, a.text-accent{color: map.get($systheme-colors, "accent-70");}
+.text-accent-65, a.text-accent{color: map.get($systheme-colors, "accent-65");}
+.text-accent-60, a.text-accent{color: map.get($systheme-colors, "accent-60");}
+
+.text-olive , a.text-olive{color: map.get($systheme-colors, "olive")!important;}
+.text-olive-90, a.text-olive{color: map.get($systheme-colors, "olive-90");}
+.text-olive-85, a.text-olive{color: map.get($systheme-colors, "olive-85");}
+.text-olive-80, a.text-olive{color: map.get($systheme-colors, "olive-80");}
+.text-olive-75, a.text-olive{color: map.get($systheme-colors, "olive-75");}
+.text-olive-70, a.text-olive{color: map.get($systheme-colors, "olive-70");}
+.text-olive-65, a.text-olive{color: map.get($systheme-colors, "olive-65");}
+.text-olive-60, a.text-olive{color: map.get($systheme-colors, "olive-60");}
+
+.text-alert, a.text-alert{color: map.get($systheme-colors, "alert")!important;}
+.text-alert-90, a.text-alert{color: map.get($systheme-colors, "alert-90");}
+.text-alert-85, a.text-alert{color: map.get($systheme-colors, "alert-85");}
+.text-alert-80, a.text-alert{color: map.get($systheme-colors, "alert-80");}
+.text-alert-75, a.text-alert{color: map.get($systheme-colors, "alert-75");}
+.text-alert-70, a.text-alert{color: map.get($systheme-colors, "alert-70");}
+.text-alert-65, a.text-alert{color: map.get($systheme-colors, "alert-65");}
+.text-alert-60, a.text-alert{color: map.get($systheme-colors, "alert-60");}
+
+
+.text-error, a.text-error{color: map.get($systheme-colors, "error")!important;}
+.text-error-90, a.text-error{color: map.get($systheme-colors, "error-90");}
+.text-error-85, a.text-error{color: map.get($systheme-colors, "error-85");}
+.text-error-80, a.text-error{color: map.get($systheme-colors, "error-80");}
+.text-error-75, a.text-error{color: map.get($systheme-colors, "error-75");}
+.text-error-70, a.text-error{color: map.get($systheme-colors, "error-70");}
+.text-error-65, a.text-error{color: map.get($systheme-colors, "error-65");}
+.text-error-60, a.text-error{color: map.get($systheme-colors, "error-60");}
+
+.text-secondary, a.text-secondary{color: map.get($systheme-colors, "secondary")!important;}
+.text-secondary-90, a.text-secondary{color: map.get($systheme-colors, "secondary-90");}
+.text-secondary-85, a.text-secondary{color: map.get($systheme-colors, "secondary-85");}
+.text-secondary-80, a.text-secondary{color: map.get($systheme-colors, "secondary-80");}
+.text-secondary-75, a.text-secondary{color: map.get($systheme-colors, "secondary-75");}
+.text-secondary-70, a.text-secondary{color: map.get($systheme-colors, "secondary-70");}
+.text-secondary-65, a.text-secondary{color: map.get($systheme-colors, "secondary-65");}
+.text-secondary-60, a.text-secondary{color: map.get($systheme-colors, "secondary-60");}
+
+.text-dark a.text-dark{color: map.get($systheme-colors, "dark") !important;}
+.text-dark-90, a.text-dark{color: map.get($systheme-colors, "dark-90");}
+.text-dark-85, a.text-dark{color: map.get($systheme-colors, "dark-85");}
+.text-dark-80, a.text-dark{color: map.get($systheme-colors, "dark-80");}
+.text-dark-75, a.text-dark{color: map.get($systheme-colors, "dark-75");}
+.text-dark-70, a.text-dark{color: map.get($systheme-colors, "dark-70");}
+.text-dark-65, a.text-dark{color: map.get($systheme-colors, "dark-65");}
+.text-dark-60, a.text-dark{color: map.get($systheme-colors, "dark-60");}
+
+
+
+.text-critical a.text-critical{color: map.get($systheme-colors, "critical") !important;}
+.text-critical-90, a.text-critical{color: map.get($systheme-colors, "critical-90");}
+.text-critical-85, a.text-critical{color: map.get($systheme-colors, "critical-85");}
+.text-critical-80, a.text-critical{color: map.get($systheme-colors, "critical-80");}
+.text-critical-75, a.text-critical{color: map.get($systheme-colors, "critical-75");}
+.text-critical-70, a.text-critical{color: map.get($systheme-colors, "critical-70");}
+.text-critical-65, a.text-critical{color: map.get($systheme-colors, "critical-65");}
+.text-critical-60, a.text-critical{color: map.get($systheme-colors, "critical-60");}
+
+.text-light, a.text-light{color: map.get($systheme-colors, "light")!important;}
+
+// Backgrounds 
+.bg-accent{background-color: map.get($systheme-colors, "accent");color: map.get($systheme-colors, "light") !important;}
+.bg-accent-90{background-color: map.get($systheme-colors, "accent-90");color: map.get($systheme-colors, "light") !important;}
+.bg-accent-85{background-color: map.get($systheme-colors, "accent-85");color: map.get($systheme-colors, "light") !important;}
+.bg-accent-80{background-color: map.get($systheme-colors, "accent-80");color: map.get($systheme-colors, "light") !important;}
+.bg-accent-75{background-color: map.get($systheme-colors, "accent-75");color: map.get($systheme-colors, "light") !important;}
+.bg-accent-70{background-color: map.get($systheme-colors, "accent-70");color: map.get($systheme-colors, "light") !important;}
+.bg-accent-65{background-color: map.get($systheme-colors, "accent-65");color: map.get($systheme-colors, "light") !important;}
+.bg-accent-60{background-color: map.get($systheme-colors, "accent-60");color: map.get($systheme-colors, "light") !important;}
+
+
+.bg-olive{background-color: map.get($systheme-colors, "olive");color: map.get($systheme-colors, "light") !important;}
+.bg-olive-90{background-color: map.get($systheme-colors, "olive-90");color: map.get($systheme-colors, "light") !important;}
+.bg-olive-85{background-color: map.get($systheme-colors, "olive-85");color: map.get($systheme-colors, "light") !important;}
+.bg-olive-80{background-color: map.get($systheme-colors, "olive-80");color: map.get($systheme-colors, "light") !important;}
+.bg-olive-75{background-color: map.get($systheme-colors, "olive-75");color: map.get($systheme-colors, "light") !important;}
+.bg-olive-70{background-color: map.get($systheme-colors, "olive-70");color: map.get($systheme-colors, "light") !important;}
+.bg-olive-65{background-color: map.get($systheme-colors, "olive-65");color: map.get($systheme-colors, "light") !important;}
+.bg-olive-60{background-color: map.get($systheme-colors, "olive-60");color: map.get($systheme-colors, "light") !important;}
+
+.bg-alert{background-color: map.get($systheme-colors, "alert");color: map.get($systheme-colors, "light") !important;}
+.bg-alert-90{background-color: map.get($systheme-colors, "alert-90");color: map.get($systheme-colors, "light") !important;}
+.bg-alert-85{background-color: map.get($systheme-colors, "alert-85");color: map.get($systheme-colors, "light") !important;}
+.bg-alert-80{background-color: map.get($systheme-colors, "alert-80");color: map.get($systheme-colors, "light") !important;}
+.bg-alert-75{background-color: map.get($systheme-colors, "alert-75");color: map.get($systheme-colors, "light") !important;}
+.bg-alert-70{background-color: map.get($systheme-colors, "alert-70");color: map.get($systheme-colors, "light") !important;}
+.bg-alert-65{background-color: map.get($systheme-colors, "alert-65");color: map.get($systheme-colors, "light") !important;}
+.bg-alert-60{background-color: map.get($systheme-colors, "alert-60");color: map.get($systheme-colors, "light") !important;}
+
+.bg-error{background-color: map.get($systheme-colors, "error");color: map.get($systheme-colors, "light") !important;}
+.bg-error-90{background-color: map.get($systheme-colors, "error-90");color: map.get($systheme-colors, "light") !important;}
+.bg-error-85{background-color: map.get($systheme-colors, "error-85");color: map.get($systheme-colors, "light") !important;}
+.bg-error-80{background-color: map.get($systheme-colors, "error-80");color: map.get($systheme-colors, "light") !important;}
+.bg-error-75{background-color: map.get($systheme-colors, "error-75");color: map.get($systheme-colors, "light") !important;}
+.bg-error-70{background-color: map.get($systheme-colors, "error-70");color: map.get($systheme-colors, "light") !important;}
+.bg-error-65{background-color: map.get($systheme-colors, "error-65");color: map.get($systheme-colors, "light") !important;}
+.bg-error-60{background-color: map.get($systheme-colors, "error-60");color: map.get($systheme-colors, "light") !important;}
+
+.bg-secondary{background-color: map.get($systheme-colors, "secondary");color: map.get($systheme-colors, "light") !important;}
+.bg-secondary-90{background-color: map.get($systheme-colors, "secondary-90");color: map.get($systheme-colors, "light") !important;}
+.bg-secondary-85{background-color: map.get($systheme-colors, "secondary-85");color: map.get($systheme-colors, "light") !important;}
+.bg-secondary-80{background-color: map.get($systheme-colors, "secondary-80");color: map.get($systheme-colors, "light") !important;}
+.bg-secondary-75{background-color: map.get($systheme-colors, "secondary-75");color: map.get($systheme-colors, "light") !important;}
+.bg-secondary-70{background-color: map.get($systheme-colors, "secondary-70");color: map.get($systheme-colors, "light") !important;}
+.bg-secondary-65{background-color: map.get($systheme-colors, "secondary-65");color: map.get($systheme-colors, "light") !important;}
+.bg-secondary-60{background-color: map.get($systheme-colors, "secondary-60");color: map.get($systheme-colors, "light") !important;}
+
+.bg-dark{background-color: map.get($systheme-colors, "dark");color: map.get($systheme-colors, "light") !important;
+   button,a{
+      color: white;
+   }}
+
+.bg-dark-90{background-color: map.get($systheme-colors, "dark-90");color: map.get($systheme-colors, "light") !important;}
+.bg-dark-85{background-color: map.get($systheme-colors, "dark-85");color: map.get($systheme-colors, "light") !important;}
+.bg-dark-80{background-color: map.get($systheme-colors, "dark-80");color: map.get($systheme-colors, "light") !important;}
+.bg-dark-75{background-color: map.get($systheme-colors, "dark-75");color: map.get($systheme-colors, "light") !important;}
+.bg-dark-70{background-color: map.get($systheme-colors, "dark-70");color: map.get($systheme-colors, "light") !important;}
+.bg-dark-65{background-color: map.get($systheme-colors, "dark-65");color: map.get($systheme-colors, "light") !important;}
+.bg-dark-60{background-color: map.get($systheme-colors, "dark-60");color: map.get($systheme-colors, "light") !important;}
+
+
+.bg-critical-90{background-color: map.get($systheme-colors, "critical-90");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-85{background-color: map.get($systheme-colors, "critical-85");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-80{background-color: map.get($systheme-colors, "critical-80");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-75{background-color: map.get($systheme-colors, "critical-75");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-70{background-color: map.get($systheme-colors, "critical-70");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-65{background-color: map.get($systheme-colors, "critical-65");color: map.get($systheme-colors, "light") !important;}
+.bg-critical-60{background-color: map.get($systheme-colors, "critical-60");color: map.get($systheme-colors, "light") !important;}
+
+.bg-light{background-color: map.get($systheme-colors, "light")!important;}
+
+
+// positions 
+.sticky-top{position: sticky;top: 0;}
+.sticky-bottom{position: sticky;bottom: 0;}
+.absolute{position: absolute;}
+.relative{position: relative;}
+.fixed-top{position: fixed; top: 0;}
+.fixed-bottom{position: fixed; bottom: 0;}
+.fixed{position: fixed;}
+
+
+// overflow (Hidden)
+.overflow-hidden{overflow: hidden;}
+.overflowX-hidden{overflow-x: hidden;}
+.overflowY-hidden{overflow-y: hidden;}
+
+
+// overflow (scroll)
+.overflow-scroll{overflow: scroll;}
+.overflowX-scroll{overflow-x: scroll;}
+.overflowY-scroll{overflow-y: scroll;}
+
+
+// overflow (auto)
+.overflow-auto{overflow: auto;}
+.overflowX-auto{overflow-x: auto;}
+.overflowY-auto{overflow-y: auto;}
+
+// Flex Sides
+.flex{
+   display: flex;
+}
+.wrap{
+   flex-wrap: wrap;
+}
+.f-d-row{
+   flex-direction: row;
+}
+.f-d-col{
+   flex-direction: column;
+}
+
+// Justify Properties (Justify Content )
+
+.justify-c-end{justify-content: flex-end;}
+.justify-c-start{justify-content: flex-start;}
+.justify-c-between{justify-content: space-between;}
+.justify-c-arround{justify-content: space-around;}
+.justify-c-evenly{justify-content: space-evenly;}
+.justify-c-center{justify-content: center;}
+
+// Alignment Properties (align Item)
+.align-i-center{align-items: center;}
+.align-i-start{align-items: flex-start;}
+.align-i-baseline{align-items: baseline;}
+.align-i-end{align-items: flex-end;}
+
+// Gaps
+
+.gap-sm{
+   gap: 10px;
+}
+.gap-lg{
+   gap: 30px;
+}
+.gap-xlg{
+   gap: 50px;
+}
+
+
+$radius:(
+   "sm" : 4px,
+   "lg" : 1rem,
+   "xlg" : 1.5rem,
+);
+
+// radius
+.sys-radius{border-radius: 4px;}
+.sys-radius-ts{border-top-left-radius: 4px;}
+.sys-radius-te{border-top-right-radius: 4px;}
+.sys-radius-bs{border-bottom-left-radius: 4px;}
+.sys-radius-be{border-bottom-right-radius: 4px;}
+
+.sys-radius{border-radius: 4px;}
+.sys-radius-ts{border-top-left-radius: 4px;}
+.sys-radius-te{border-top-right-radius: 4px;}
+.sys-radius-bs{border-bottom-left-radius: 4px;}
+.sys-radius-be{border-bottom-right-radius: 4px;}
+
+.sys-radius-sm{border-radius: map.get($radius, "sm");}
+.sys-radius-sm-ts{border-top-left-radius: map.get($radius, "sm");}
+.sys-radius-sm-te{border-top-right-radius: map.get($radius, "sm");}
+.sys-radius-sm-bs{border-bottom-left-radius: map.get($radius, "sm");}
+.sys-radius-sm-be{border-bottom-right-radius: map.get($radius, "sm");}
+
+
+.sys-radius-lg{border-radius: map.get($radius, "lg");}
+.sys-radius-lg-ts{border-top-left-radius: map.get($radius, "lg");}
+.sys-radius-lg-te{border-top-right-radius: map.get($radius, "lg");}
+.sys-radius-lg-bs{border-bottom-left-radius: map.get($radius, "lg");}
+.sys-radius-lg-be{border-bottom-right-radius: map.get($radius, "lg");}
+
+.sys-radius-xlg{border-radius: map.get($radius, "xlg");}
+.sys-radius-xlg-ts{border-top-left-radius: map.get($radius, "xlg");}
+.sys-radius-xlg-te{border-top-right-radius: map.get($radius, "xlg");}
+.sys-radius-xlg-bs{border-bottom-left-radius: map.get($radius, "xlg");}
+.sys-radius-xlg-be{border-bottom-right-radius: map.get($radius, "xlg");}
+
+
+// width
+.w-100{
+   width: 100%;
+}
+.w-75{
+   width: 75%;
+}
+.w-50{
+   width: 50%;
+}
+.w-25{
+   width: 25%;
+}
+.w-0{
+   width: auto;
+}

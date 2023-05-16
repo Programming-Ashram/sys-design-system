@@ -1,0 +1,207 @@
+.sys-border-solid {
+  border: 1px solid;
+}
+
+.sys-border-groove {
+  border: 1px groove;
+}
+
+.sys-border-dotted {
+  border: 1px dotted;
+}
+
+.sys-border-double {
+  border: 1px double;
+}
+
+.border-accent, a.border-accent {
+  border-color: #000075;
+}
+
+.border-accent-90, a.border-accent {
+  border-color: rgba(0, 0, 209, 0.9);
+}
+
+.border-accent-85, a.border-accent {
+  border-color: rgba(0, 0, 209, 0.85);
+}
+
+.border-accent-80, a.border-accent {
+  border-color: rgba(0, 0, 209, 0.8);
+}
+
+.border-accent-75, a.border-accent {
+  border-color: rgba(0, 0, 209, 0.75);
+}
+
+.border-accent-70, a.border-accent {
+  border-color: rgba(0, 0, 209, 0.7);
+}
+
+.border-accent-65, a.border-accent {
+  border-color: rgba(0, 0, 209, 0.65);
+}
+
+.border-accent-60, a.border-accent {
+  border-color: rgba(0, 0, 209, 0.6);
+}
+
+.border-olive, a.border-olive {
+  border-color: #5FD855;
+}
+
+.border-olive-90, a.border-olive {
+  border-color: rgba(95, 216, 85, 0.9);
+}
+
+.border-olive-85, a.border-olive {
+  border-color: rgba(95, 216, 85, 0.85);
+}
+
+.border-olive-80, a.border-olive {
+  border-color: rgba(95, 216, 85, 0.8);
+}
+
+.border-olive-75, a.border-olive {
+  border-color: rgba(95, 216, 85, 0.75);
+}
+
+.border-olive-70, a.border-olive {
+  border-color: rgba(95, 216, 85, 0.7);
+}
+
+.border-olive-65, a.border-olive {
+  border-color: rgba(95, 216, 85, 0.65);
+}
+
+.border-olive-60, a.border-olive {
+  border-color: rgba(95, 216, 85, 0.6);
+}
+
+.border-alert, a.border-alert {
+  border-color: #FFB800;
+}
+
+.border-alert-90, a.border-alert {
+  border-color: rgba(255, 184, 0, 0.9);
+}
+
+.border-alert-85, a.border-alert {
+  border-color: rgba(255, 184, 0, 0.85);
+}
+
+.border-alert-80, a.border-alert {
+  border-color: rgba(255, 184, 0, 0.8);
+}
+
+.border-alert-75, a.border-alert {
+  border-color: rgba(255, 184, 0, 0.75);
+}
+
+.border-alert-70, a.border-alert {
+  border-color: rgba(255, 184, 0, 0.7);
+}
+
+.border-alert-65, a.border-alert {
+  border-color: rgba(255, 184, 0, 0.65);
+}
+
+.border-alert-60, a.border-alert {
+  border-color: rgba(255, 184, 0, 0.6);
+}
+
+.border-error, a.border-error {
+  border-color: #C73E1D;
+}
+
+.border-error-90, a.border-error {
+  border-color: rgba(199, 62, 29, 0.9);
+}
+
+.border-error-85, a.border-error {
+  border-color: rgba(199, 62, 29, 0.85);
+}
+
+.border-error-80, a.border-error {
+  border-color: rgba(199, 62, 29, 0.8);
+}
+
+.border-error-75, a.border-error {
+  border-color: rgba(199, 62, 29, 0.75);
+}
+
+.border-error-70, a.border-error {
+  border-color: rgba(199, 62, 29, 0.7);
+}
+
+.border-error-65, a.border-error {
+  border-color: rgba(199, 62, 29, 0.65);
+}
+
+.border-error-60, a.border-error {
+  border-color: rgba(199, 62, 29, 0.6);
+}
+
+.border-secondary, a.border-secondary {
+  border-color: #6c757d;
+}
+
+.border-secondary-90, a.border-secondary {
+  border-color: rgba(108, 117, 125, 0.9);
+}
+
+.border-secondary-85, a.border-secondary {
+  border-color: rgba(108, 117, 125, 0.85);
+}
+
+.border-secondary-80, a.border-secondary {
+  border-color: rgba(108, 117, 125, 0.8);
+}
+
+.border-secondary-75, a.border-secondary {
+  border-color: rgba(108, 117, 125, 0.75);
+}
+
+.border-secondary-70, a.border-secondary {
+  border-color: rgba(108, 117, 125, 0.7);
+}
+
+.border-secondary-65, a.border-secondary {
+  border-color: rgba(108, 117, 125, 0.65);
+}
+
+.border-secondary-60, a.border-secondary {
+  border-color: rgba(108, 117, 125, 0.6);
+}
+
+.border-dark a.border-dark {
+  border-color: #303030;
+}
+
+.border-dark-90, a.border-dark {
+  border-color: rgba(48, 48, 48, 0.9);
+}
+
+.border-dark-85, a.border-dark {
+  border-color: rgba(48, 48, 48, 0.85);
+}
+
+.border-dark-80, a.border-dark {
+  border-color: rgba(48, 48, 48, 0.8);
+}
+
+.border-dark-75, a.border-dark {
+  border-color: rgba(48, 48, 48, 0.75);
+}
+
+.border-dark-70, a.border-dark {
+  border-color: rgba(48, 48, 48, 0.7);
+}
+
+.border-dark-65, a.border-dark {
+  border-color: rgba(48, 48, 48, 0.65);
+}
+
+.border-dark-60, a.border-dark {
+  border-color: rgba(48, 48, 48, 0.6);
+}/*# sourceMappingURL=sys-border.css.map */

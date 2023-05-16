@@ -1,3 +1,18 @@
+@import url(./layout/container/sys-container.css);
+@import url(./layout/grid/sys.grid.css);
+@import url(./helpers/sys-helpers.css);
+@import url(./variables/variable.css);
+@import url(./content/typography/sys-typography.css);
+@import url(./content/images/sys-image.css);
+@import url(./utilites/spacing/sys-utilities.css);
+@import url(./component/sys-components/sys-header/sys-header.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
+@import url(./utilites/border/sys-border.css);
+@import url(./component/sys-components/sys-sidebar/sys-sidebar.css);
+@import url(./utilites/text-alignments/sys-text-alignment.css);
+@import url(./component/sys-components/sys-snackbar/style.css);
+
+
 *{
     margin: 0;
     padding: 0;
@@ -25,8 +40,16 @@ $error-19:rgb(199, 62, 29, 19%);
 $secondary-100:#6c757d;
 $secondary-19:rgb(108, 117, 125, 19%);
 
+$critical-100:#e700e7;
+$critical-19:rgb(231, 0, 231, 19%);
+
+
 // dark
-$dark:#000000;
+$dark-100: #000000;
+$dark-19:rgb(0, 0, 0, 19%);
+$dark:#303030;
+$gray:#292929;
+
 
 // Default theme Exploration
 
@@ -41,17 +64,11 @@ $dark:#000000;
     max-width: 100%;
     width: auto;
     white-space: nowrap;
+    text-decoration: none;
+    display: inline-block
+
 }
 
-[size="lg"]{
-    width: 130px !important;
-    padding: 12px 0px !important;
-}
-[size="sm"]{
-    width: auto !important;
-    font-size: x-small;
-    padding: 8px 10px !important;
-}
 
 @mixin standard-button{
     @include outline-button();
@@ -71,8 +88,365 @@ $dark:#000000;
     overflow: hidden;
     white-space: nowrap;
 }
-.sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary{
-    @include outline-button();
+
+@mixin  btn-disabled {
+    @include  disable-outline-button();
+}
+
+@mixin  btn-group {
+    display: inline-flex;
+    :first-child{
+        border-top-right-radius: 0px; 
+        border-bottom-right-radius: 0px; 
+        border-top-left-radius: 4px !important;
+        border-bottom-left-radius: 4px !important;
+    }
+    :last-child{
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    :not(:last-child){
+        border-radius: 0px;
+    }
+ 
+    [size=sm] {
+        padding: 14px 10px !important;
+    }
+   
+}
+
+@mixin rounded-sys-switch {
+    .sys-switch-label {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+      
+    .sys-switch-label input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+      
+    .sys-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+      
+    .sys-slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+      
+    input:checked + .sys-slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .sys-slider.round {
+        border-radius: 34px;
+    }
+    .sys-slider.round:before {
+        border-radius: 50%;
+    }
+    input:disabled + .sys-slider{
+        opacity: .6;
+    }
+}
+
+
+// BADGE
+@mixin badge{
+    padding: 3px 10px;
+    width: auto;
+    font-size: 13px;
+    border-radius: 15px;
+    border:1px solid;
+}
+
+@mixin card-v1{
+    padding: 1.3rem;
+    width: auto !important;
+    border-radius: 10px !important;
+    height: 100%;
+    .sys-grid{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .icon, img{
+        border-radius: 100%;
+        width: 100px;
+        height: 95px;
+        object-fit: cover;
+    }
+    .title, .sub-title{
+        font-size: 20.58px;
+        text-transform: capitalize;
+    }
+    .sub-title{
+        font-size: 16px;
+        color: $secondary-100;
+    }
+    .sys-action{
+        margin-top: 1.5rem;
+        button, a{
+            width: 100%;
+        }
+    }
+    float: none !important;
+}
+
+@mixin card-v2 {
+    max-width: 20%;
+    .sys-grid{
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+    }
+    @include card-v1();
+    .sys-action{
+        display: flex;
+        button, a{
+            margin-right: 10px;
+        }
+    }
+    .details{
+        line-height: 2.2;
+    }
+    .social-links{
+       margin: 1rem 0;
+        ul{
+            list-style-type: none;
+            padding-left: 0px;
+            li{
+                display: inline-block;
+                margin-right: 1rem;
+                a{
+                    font-size: 20px;
+                    color: $secondary-100;
+                }
+            }
+        }
+    }
+}
+
+.sys-card-v1{   
+    @include card-v1();
+}
+.sys-card-v2{
+    @include card-v2();
+}
+
+.sys-pin-outline-badge{
+    @include badge;
+}
+.sys-pin-badge{
+    @include badge;
+    border: none;
+}
+
+.sys-standard-badge{
+    @include badge;
+    border: none;
+}
+.sys-outline-badge{
+    @include badge;
+    border: 1px solid;
+}
+
+.sys-pin-basic-badge{
+    @include badge;
+    border:none;
+    padding: 5px 11px;
+}
+.sys-pin-outline-badge i{
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.badge-accent{
+    color:$accent-100;
+    border-color: $accent-100;
+}
+.badge-alert{
+    color:$alert-100 ;
+    border-color: $alert-100;
+}
+.badge-olive{
+    color:$olive-100 ;
+    border-color: $olive-100;
+}
+.badge-error{
+    color: $error-100;
+    border-color: $error-100;
+}
+.badge-secondary{
+    color: $secondary-100;
+    border-color: $secondary-100;
+}
+
+
+.sys-outline-badge{
+    
+    .badge-accent{
+        color:$accent-100;
+        border-color: $accent-100;
+    }
+    .badge-alert{
+        color:$alert-100 ;
+        border-color: $alert-100;
+    }
+    .badge-olive{
+        color:$olive-100 ;
+        border-color: $olive-100;
+    }
+    .badge-error{
+        color: $error-100;
+        border-color: $error-100;
+    }
+    .badge-secondary{
+        color: $secondary-100;
+        border-color: $secondary-100;
+    }
+}
+
+.sys-pin-badge, .sys-standard-badge{
+    color: white;
+    &.badge-accent{
+       background-color: $accent-100;
+    }
+    &.badge-alert{
+        background-color: $alert-100;
+    }
+    &.badge-olive{
+        background-color: $olive-100;
+    }
+    &.badge-error{
+        background-color: $error-100;
+    }
+    &.badge-secondary{
+        background-color: $secondary-100;
+    }
+    i{
+        margin-right: 6px;
+    }
+}
+
+
+
+
+
+// 
+
+@mixin elevation {
+    padding: 1rem;
+    border-radius: 4px;
+    width: 200px;
+    float: left;
+    margin: 10px;
+    .elevation-title{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .elevation-content{
+        line-height: 20px;
+        margin-bottom: 10px;
+    } 
+}
+
+.sys-elevation-v1{ 
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.sys-elevation-v2{ 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sys-elevation-v3{
+    box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
+}
+
+.sys-elevation-v4{
+    box-shadow: 0px 80px 50px -30px rgba(0, 0, 0, 0.15);
+}
+
+.sys-elevation-v5{
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.15);
+}
+
+
+
+// btn sizing
+
+[size="lg"]{
+    width: 130px !important;
+    padding: 12px 0px !important;
+}
+
+[size="sm"]{
+    width: auto !important;
+    font-size: x-small;
+    padding: 8px 10px !important;
+}
+
+.sys-switch-olive{
+    @include rounded-sys-switch();
+    input:checked + .sys-slider {
+        background-color: $olive-100;
+    }
+}
+.sys-switch-accent{
+    @include rounded-sys-switch();
+    input:checked + .sys-slider {
+        background-color: $accent-100;
+    }
+}
+
+.sys-switch-error{
+    @include rounded-sys-switch();
+    input:checked + .sys-slider {
+        background-color: $error-100;
+    }
+}
+.sys-switch-alert{
+    @include rounded-sys-switch();
+    input:checked + .sys-slider {
+        background-color: $alert-100;
+    }
+}
+.sys-switch-secondary{
+    @include rounded-sys-switch();
+    input:checked + .sys-slider {
+        background-color: $secondary-100;
+    }
+}
+
+.sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary, .sys-btn-outline-critical, .sys-btn-outline-dark{
+    @include outline-button();    
+}
+.sys-btn-outline-dark{
+    border: 1px solid $dark-100;
+}
+.sys-btn-outline-accent{
+    border: 1px solid $accent-100;
 }
 .sys-btn-outline-accent{
     border: 1px solid $accent-100;
@@ -83,8 +457,19 @@ $dark:#000000;
 .sys-btn-outline-secondary{
     border: 1px solid $secondary-100;
 }
+.sys-btn-outline-secondary{
+    border: 1px solid $secondary-100;
+}
+.sys-btn-outline-critical{
+    border: 1px solid $critical-100;
+}
 .sys-btn-outline-disable{
    @include disable-outline-button(); 
+}
+
+.sys-btn-disable{
+    @include btn-disabled();
+    background-color: #6c757d;
 }
 
 // hover state 
@@ -92,6 +477,18 @@ $dark:#000000;
     background-color: $accent-19;
     box-shadow: 0px 4px 10px -1px $accent-19;
     transition: 0.2s;
+}
+.sys-btn-outline-dark:hover{
+    background-color: $dark-19;
+    box-shadow: 0px 4px 10px -1px $dark-19;
+    transition: 0.2s;
+}
+.sys-btn-outline-dark:focus{
+    background-color: $dark-100;
+    border: 1px solid white;
+    box-shadow: 0px 4px 10px -1px $dark-19;
+    transition: 0.2s;
+    color: white;
 }
 .sys-btn-outline-accent:focus{
     background-color: $accent-100;
@@ -109,6 +506,18 @@ $dark:#000000;
     background-color: $secondary-100;
     border: 1px solid white;
     box-shadow: 0px 4px 10px -1px $secondary-19;
+    transition: 0.2s;
+    color: white;
+}
+.sys-btn-outline-critical:hover{
+    background-color: $critical-19;
+    box-shadow: 0px 4px 10px -1px $critical-19;
+    transition: 0.2s;
+}
+.sys-btn-outline-critical:focus{
+    background-color: $critical-100;
+    border: 1px solid white;
+    box-shadow: 0px 4px 10px -1px $critical-19;
     transition: 0.2s;
     color: white;
 }
@@ -156,12 +565,22 @@ $dark:#000000;
     color: white;
 }
 
+// button group
+
+.sys-btn-group{
+    @include btn-group();
+}
+
 // standard button
-.sys-btn-accent, .sys-btn-olive, .sys-btn-alert, .sys-btn-error, .sys-btn-secondary{
+.sys-btn-accent, .sys-btn-olive, .sys-btn-alert, .sys-btn-error, .sys-btn-secondary, .sys-btn-critical, .sys-btn-dark{
     @include standard-button();
     border: none;
     color: white;
 }
+.sys-btn-dark{
+    background-color: $dark-100;
+}
+
 
 .sys-btn-accent{
     background-color: $accent-100;
@@ -179,7 +598,35 @@ $dark:#000000;
 .sys-btn-secondary{
     background-color: $secondary-100;
 }
-
+.sys-btn-critical{
+    background-color: $critical-100;
+}
+.sys-btn-dark:hover{
+    background-color: $dark-19;
+    box-shadow: 0px 4px 10px -1px $dark-19;
+    transition: 0.2s;
+    border: 1px solid $dark-100;
+}
+.sys-btn-dark:focus{
+    background-color: $dark-100;
+    border: 1px solid white;
+    box-shadow: 0px 4px 10px -1px $dark-19;
+    transition: 0.2s;
+    color: white;
+}
+.sys-btn-critical:hover{
+    background-color: $critical-19;
+    box-shadow: 0px 4px 10px -1px $critical-19;
+    transition: 0.2s;
+    border: 1px solid $critical-100;
+}
+.sys-btn-critical:focus{
+    background-color: $critical-100;
+    border: 1px solid white;
+    box-shadow: 0px 4px 10px -1px $critical-19;
+    transition: 0.2s;
+    color: white;
+}
 .sys-btn-accent:hover{
     background-color: $accent-19;
     box-shadow: 0px 4px 10px -1px $accent-19;
@@ -250,14 +697,219 @@ $dark:#000000;
     color: white;
 }
 
+@mixin  checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .checkmark:after {
+        left: 10px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .checkmark {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 33px;
+        border: 1px solid #FFFFFF;
+        border-radius: 2px;
+        padding: 0px 13px;
+      }
+      
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }    
+      input[type=checkbox]:checked ~ .checkmark:after {
+        display: block;
+      }  
+}
+[size="lg"]{
+    &.sys-outline-checkbox .checkmark, &.sys-checkbox .checkmark{
+        padding: 5px 13px !important;
+    }
+}
+[size="sm"]{
+    &.sys-outline-checkbox .checkmark, &.sys-checkbox .checkmark{
+        padding: 3px 9px !important;
+        font-size: smaller;
+    }
+    &.sys-outline-checkbox .checkmark:after{
+        border: solid black;
+        left: 6px !important;
+        top: 2px !important;
+        width: 5px;
+        height: 10px;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+    &.sys-checkbox .checkmark:after{
+        border: solid white;
+        left: 6px !important;
+        top: 2px !important;
+        width: 5px;
+        height: 10px;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
+  // checkbox
+  .sys-checkbox .checkmark{
+    border: 1px solid $secondary-100; 
+  }
+  
+
+// checkboxes
+// checkbox color
+.sys-checkbox, .sys-outline-checkbox {
+    @include checkbox();
+
+    .checkmark:after {
+        left: 10px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+      
+      &.checkbox-accent{
+          .checkmark {
+              border: 1px solid $accent-100;
+          }
+      }
+    
+      &.checkbox-olive{
+          .checkmark {
+              border: 1px solid $olive-100;
+          }
+      }
+     
+      &.checkbox-alert{
+          .checkmark {
+              border: 1px solid $alert-100;
+          }
+      }
+     
+      &.checkbox-error{
+          .checkmark {
+              border: 1px solid $error-100;
+          }
+      }
+     
+      &.checkbox-secondary{
+          .checkmark {
+              border: 1px solid $secondary-100;
+          }
+      }
+}
+.sys-outline-checkbox {
+    @include checkbox();
+    
+    .checkmark:after {
+        left: 10px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+
+
+.sys-outline-checkbox{
+    /* checkbox hover and checked effect */
+    &.checkbox-accent:hover input ~ .checkmark {
+        background: transparent;
+        filter: drop-shadow(0px 4px 4px rgba(48, 79, 254, 0.6));
+    }
+    &.checkbox-olive:hover input ~ .checkmark {
+        background: transparent;
+        filter: drop-shadow(0px 4px 4px rgba(95, 216, 85, 0.4));
+    }
+    &.checkbox-alert:hover input ~ .checkmark {
+        background: transparent;
+        filter: drop-shadow(0px 4px 4px rgba(255, 184, 0, 0.25));
+    }
+    &.checkbox-error:hover input ~ .checkmark {
+        background: transparent;
+        filter: drop-shadow(0px 4px 4px rgba(199, 62, 29, 0.45));
+    }
+    &.checkbox-secondary:hover input ~ .checkmark {
+        background: transparent;
+        filter: drop-shadow(0px 4px 4px rgba(108, 117, 125, 0.4));
+    }
+}
+
+
+.sys-checkbox{
+    &.checkbox-accent input:checked ~ .checkmark {
+        background-color: $accent-100;
+        filter: drop-shadow(0px 4px 4px rgba(48, 79, 254, 0.6));
+    }
+    &.checkbox-olive input:checked ~ .checkmark {
+        background-color: $olive-100;
+        filter: drop-shadow(0px 4px 4px rgba(95, 216, 85, 0.4));
+    }
+    &.checkbox-alert input:checked ~ .checkmark {
+        background-color: $alert-100;
+        filter: drop-shadow(0px 4px 4px rgba(255, 184, 0, 0.25));
+    }
+    &.checkbox-error input:checked ~ .checkmark {
+        background-color: $error-100;
+        filter: drop-shadow(0px 4px 4px rgba(199, 62, 29, 0.45));
+    }
+    &.checkbox-secondary input:checked ~ .checkmark {
+        background:$secondary-100;
+        filter: drop-shadow(0px 4px 4px rgba(108, 117, 125, 0.4));
+    }
+}
+
+
+
+// sys-card
+
+
+
+
 // dark theme eploraton
 .dark-theme{
     background-color: $dark;
     color: white;
+    
     @mixin dark-outline-button{
         color: white;
     }
-    .sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary{
+    .sys-btn-outline-accent, .sys-btn-outline-alert, .sys-btn-outline-olive, .sys-btn-outline-error, .sys-btn-outline-secondary, .sys-btn-outline-critical, .sys-btn-outline-dark{
         @include dark-outline-button();
     }
     .sys-btn-outline-accent{
@@ -306,4 +958,103 @@ $dark:#000000;
         transition: 0.2s;
         color: white;
     }
+
+    .sys-btn-outline-critical{
+        border: 1px solid $critical-100;
+    }
+    .sys-btn-outline-critical:hover{
+        background-color: $critical-19;
+        box-shadow: 0px 4px 10px 0px $critical-19;
+        transition: 0.2s;
+    }
+    .sys-btn-outline-critical:focus{
+        background-color: $critical-100;
+        border: 1px solid white;
+        box-shadow: 0px 4px 10px 0px $critical-19;
+        transition: 0.2s;
+        color: white;
+    }
+
+
+    // elevation
+
+    .sys-elevation-v1{
+       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    .sys-elevation-v2{
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .sys-elevation-v3{
+        box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sys-elevation-v4{
+      box-shadow: 0px 80px 50px -30px rgba(0, 0, 0, 0.15);
+    }
+
+    .sys-elevation-v5{
+    
+        box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.15);
+    }
+
+
+    
+// checkbox color
+.sys-checkbox, .sys-outline-checkbox {
+    @include checkbox();
+    .checkmark:after {
+        left: 10px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+      &.checkbox-accent{
+          .checkmark {
+              border: 1px solid $accent-100;
+          }
+      }
+      &.checkbox-olive{
+          .checkmark {
+              border: 1px solid $olive-100;
+          }
+      }
+      &.checkbox-alert{
+          .checkmark {
+              border: 1px solid $alert-100;
+          }
+      }
+      &.checkbox-error{
+          .checkmark {
+              border: 1px solid $error-100;
+          }
+      }
+      &.checkbox-secondary{
+          .checkmark {
+              border: 1px solid $secondary-100;
+          }
+      }
+  }
+.sys-outline-checkbox {
+    @include checkbox();
+    
+    .checkmark:after {
+        left: 10px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
 }

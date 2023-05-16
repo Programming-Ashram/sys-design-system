@@ -1,0 +1,41 @@
+@use '../../../utilites/spacing/sys-utilities';
+
+header.sys-header{
+    .sys-grid{
+        align-items: center;
+    }
+    .sys-brand{
+        width: 150px;
+    }
+}
+
+ul.sys-navbar{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    li{
+        display: inline-block;
+        margin-right: 1rem;
+        a{ 
+            
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+    }
+    &.vertical-menu{
+        display: grid;
+        width: 100%;
+    }
+}
+
+ul.sys-nav-mobile{
+    @extend .sys-navbar;
+}
+
+
+@media(max-width: 767px){
+    .sys-nav-mobile{
+        display: grid !important;
+        width: 100%;
+    }
+}

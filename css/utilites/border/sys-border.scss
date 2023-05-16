@@ -1,0 +1,136 @@
+@use "../../variables/variable";
+@use "sass:map";
+
+// SYS COLOR THEMEPALET
+$systheme-colors: (
+   // accent variation
+  "accent": variable.$accent-100,
+  "accent-90": variable.$accent-90,
+  "accent-85": variable.$accent-85,
+  "accent-80": variable.$accent-80,
+  "accent-75": variable.$accent-75,
+  "accent-70": variable.$accent-70,
+  "accent-65": variable.$accent-65,
+  "accent-60": variable.$accent-60,
+
+  // Olive variation
+  "olive": variable.$olive-100,
+  "olive-90": variable.$olive-90,
+  "olive-85": variable.$olive-85,
+  "olive-80": variable.$olive-80,
+  "olive-75": variable.$olive-75,
+  "olive-70": variable.$olive-70,
+  "olive-65": variable.$olive-65,
+  "olive-60": variable.$olive-60,
+
+  // Alert variation
+  "alert": variable.$alert-100,
+  "alert-90": variable.$alert-90,
+  "alert-85": variable.$alert-85,
+  "alert-80": variable.$alert-80,
+  "alert-75": variable.$alert-75,
+  "alert-70": variable.$alert-70,
+  "alert-65": variable.$alert-65,
+  "alert-60": variable.$alert-60,
+
+
+  //Error variation   
+  "error": variable.$error-100,
+  "error-90": variable.$error-90,
+  "error-85": variable.$error-85,
+  "error-80": variable.$error-80,
+  "error-75": variable.$error-75,
+  "error-70": variable.$error-70,
+  "error-65": variable.$error-65,
+  "error-60": variable.$error-60,
+
+
+  // Secondary Variation   
+  "secondary": variable.$secondary-100,
+  "secondary-90": variable.$secondary-90,
+  "secondary-85": variable.$secondary-85,
+  "secondary-80": variable.$secondary-80,
+  "secondary-75": variable.$secondary-75,
+  "secondary-70": variable.$secondary-70,
+  "secondary-65": variable.$secondary-65,
+  "secondary-60": variable.$secondary-60,
+
+  "dark": variable.$dark-100,
+  "dark-90": variable.$dark-90,
+  "dark-85": variable.$dark-85,
+  "dark-80": variable.$dark-80,
+  "dark-75": variable.$dark-75,
+  "dark-70": variable.$dark-70,
+  "dark-65": variable.$dark-65,
+  "dark-60": variable.$dark-60,
+
+  "light": variable.$light-100,
+);
+
+.sys-border-solid{
+    border: 1px solid;
+}
+.sys-border-groove{
+    border: 1px groove;
+}
+.sys-border-dotted{
+    border: 1px dotted;
+}
+.sys-border-double{
+    border: 1px double;
+}
+
+.border-accent, a.border-accent{border-color: map.get($systheme-colors, "accent");}
+.border-accent-90, a.border-accent{border-color: map.get($systheme-colors, "accent-90");}
+.border-accent-85, a.border-accent{border-color: map.get($systheme-colors, "accent-85");}
+.border-accent-80, a.border-accent{border-color: map.get($systheme-colors, "accent-80");}
+.border-accent-75, a.border-accent{border-color: map.get($systheme-colors, "accent-75");}
+.border-accent-70, a.border-accent{border-color: map.get($systheme-colors, "accent-70");}
+.border-accent-65, a.border-accent{border-color: map.get($systheme-colors, "accent-65");}
+.border-accent-60, a.border-accent{border-color: map.get($systheme-colors, "accent-60");}
+
+.border-olive , a.border-olive{border-color: map.get($systheme-colors, "olive");}
+.border-olive-90, a.border-olive{border-color: map.get($systheme-colors, "olive-90");}
+.border-olive-85, a.border-olive{border-color: map.get($systheme-colors, "olive-85");}
+.border-olive-80, a.border-olive{border-color: map.get($systheme-colors, "olive-80");}
+.border-olive-75, a.border-olive{border-color: map.get($systheme-colors, "olive-75");}
+.border-olive-70, a.border-olive{border-color: map.get($systheme-colors, "olive-70");}
+.border-olive-65, a.border-olive{border-color: map.get($systheme-colors, "olive-65");}
+.border-olive-60, a.border-olive{border-color: map.get($systheme-colors, "olive-60");}
+
+.border-alert, a.border-alert{border-color: map.get($systheme-colors, "alert");}
+.border-alert-90, a.border-alert{border-color:  map.get($systheme-colors, "alert-90");}
+.border-alert-85, a.border-alert{border-color:  map.get($systheme-colors, "alert-85");}
+.border-alert-80, a.border-alert{border-color:  map.get($systheme-colors, "alert-80");}
+.border-alert-75, a.border-alert{border-color:  map.get($systheme-colors, "alert-75");}
+.border-alert-70, a.border-alert{border-color:  map.get($systheme-colors, "alert-70");}
+.border-alert-65, a.border-alert{border-color:  map.get($systheme-colors, "alert-65");}
+.border-alert-60, a.border-alert{border-color:  map.get($systheme-colors, "alert-60");}
+
+
+.border-error, a.border-error{border-color: map.get($systheme-colors, "error");}
+.border-error-90, a.border-error{border-color: map.get($systheme-colors, "error-90");}
+.border-error-85, a.border-error{border-color: map.get($systheme-colors, "error-85");}
+.border-error-80, a.border-error{border-color: map.get($systheme-colors, "error-80");}
+.border-error-75, a.border-error{border-color: map.get($systheme-colors, "error-75");}
+.border-error-70, a.border-error{border-color: map.get($systheme-colors, "error-70");}
+.border-error-65, a.border-error{border-color: map.get($systheme-colors, "error-65");}
+.border-error-60, a.border-error{border-color: map.get($systheme-colors, "error-60");}
+
+.border-secondary, a.border-secondary{border-color: map.get($systheme-colors, "secondary");}
+.border-secondary-90, a.border-secondary{border-color: map.get($systheme-colors, "secondary-90");}
+.border-secondary-85, a.border-secondary{border-color: map.get($systheme-colors, "secondary-85");}
+.border-secondary-80, a.border-secondary{border-color: map.get($systheme-colors, "secondary-80");}
+.border-secondary-75, a.border-secondary{border-color: map.get($systheme-colors, "secondary-75");}
+.border-secondary-70, a.border-secondary{border-color: map.get($systheme-colors, "secondary-70");}
+.border-secondary-65, a.border-secondary{border-color: map.get($systheme-colors, "secondary-65");}
+.border-secondary-60, a.border-secondary{border-color: map.get($systheme-colors, "secondary-60");}
+
+.border-dark a.border-dark{border-color: map.get($systheme-colors, "dark");}
+.border-dark-90, a.border-dark{border-color: map.get($systheme-colors, "dark-90");}
+.border-dark-85, a.border-dark{border-color: map.get($systheme-colors, "dark-85");}
+.border-dark-80, a.border-dark{border-color: map.get($systheme-colors, "dark-80");}
+.border-dark-75, a.border-dark{border-color: map.get($systheme-colors, "dark-75");}
+.border-dark-70, a.border-dark{border-color: map.get($systheme-colors, "dark-70");}
+.border-dark-65, a.border-dark{border-color: map.get($systheme-colors, "dark-65");}
+.border-dark-60, a.border-dark{border-color: map.get($systheme-colors, "dark-60");}
